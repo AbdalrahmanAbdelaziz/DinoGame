@@ -1,0 +1,12 @@
+<div class="game" (keydown)="handleKeydown($event)" tabindex="0">
+  <div id="dino" [class.jump]="isJumping" [class.walk]="isGameActive && !isJumping">
+    <img src="trex.png" alt="dino" />
+  </div>
+  <div id="cactus" [class.animate-cactus]="isGameActive">
+    <img src="cactus.png" alt="cactus" />
+  </div>
+  <div class="score">Score: {{ score }}</div>
+  <button *ngIf="gameOver" class="restart-button" (click)="restartGame()">
+    Restart Game
+  </button>
+</div>

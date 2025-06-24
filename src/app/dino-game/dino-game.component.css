@@ -1,0 +1,118 @@
+.game {
+  width: 600px;
+  height: 200px;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  background: linear-gradient(to bottom, #87ceeb, #ffffff);
+}
+
+#dino {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 150px;
+  left: 50px;
+}
+
+#dino img {
+  width: 50px;
+  height: 50px;
+}
+
+.jump {
+  animation: jump 0.3s linear;
+}
+
+@keyframes jump {
+  0% {
+    top: 150px;
+  }
+  30% {
+    top: 130px;
+  }
+  50% {
+    top: 80px;
+  }
+  80% {
+    top: 130px;
+  }
+  100% {
+    top: 150px;
+  }
+}
+
+.walk img {
+  animation: dinoWalk 0.4s steps(2) infinite;
+}
+
+@keyframes dinoWalk {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+#cactus {
+  width: 20px;
+  height: 40px;
+  position: absolute;
+  top: 160px;
+  left: 580px;
+}
+
+#cactus img {
+  width: 20px;
+  height: 40px;
+}
+
+.animate-cactus {
+  animation: block 1s infinite linear;
+}
+
+@keyframes block {
+  0% {
+    left: 580px;
+  }
+  100% {
+    left: -20px;
+  }
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  z-index: 2;
+  font-family: monospace;
+}
+
+.restart-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.restart-button:hover {
+  background-color: #222;
+}

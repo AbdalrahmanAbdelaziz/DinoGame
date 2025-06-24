@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { DinoGameComponent } from './dino-game/dino-game.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [DinoGameComponent],
+  template: `<app-dino-game></app-dino-game>`,
 })
-export class AppComponent {
-  title = 'dino';
-}
+export class AppComponent {}
